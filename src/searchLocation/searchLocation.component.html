@@ -1,0 +1,16 @@
+<ng2-completer [(ngModel)]="location" (selected)="getLatLong()" [datasource]="countries" [minSearchLength]="0"></ng2-completer>
+
+<ng-container *ngIf="showLatLong">
+  you are in {{location}} and your coordinates are {{lat}} {{long}}
+</ng-container>
+
+<br>
+<input type="text" [(ngModel)]="userNote">
+<br>
+<br>
+
+<br>
+<span>
+  <input type="button" class="btn btn-primary" value="Save" (click)="save()" />
+</span>
+
